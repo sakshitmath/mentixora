@@ -35,9 +35,12 @@ public class CredixController {
         return ResponseEntity.ok(new java.util.HashMap<>() {{
             put("userId", user.getId());
             put("username", user.getUsername());
+            put("email", user.getEmail());
+            put("bio", user.getBio());
             put("karma", user.getKarma());
             put("credixScore", user.getCredixScore());
             put("contributorLevel", user.getContributorLevel());
+            put("createdAt", user.getCreatedAt());
             put("badges", badges);
         }});
     }
