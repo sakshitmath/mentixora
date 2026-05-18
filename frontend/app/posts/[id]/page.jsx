@@ -248,6 +248,13 @@ export default function PostDetailPage() {
           border: 1px solid rgba(0,229,200,0.3);
           color: #00e5c8; font-weight: 600;
         }
+          @media (max-width: 768px) {
+  .page-wrap { padding: 68px 12px 40px; }
+  .post-title { font-size: 17px; }
+  .actions-row { gap: 6px; }
+  .reactions-row { gap: 6px; }
+  .reaction-btn { padding: 5px 9px; }
+}
       `}</style>
 
       {/* Navbar */}

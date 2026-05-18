@@ -243,6 +243,13 @@ export default function ProfilePage() {
           font-size: 11px; color: #1a3a5a;
           margin-top: 8px; text-align: right;
         }
+          @media (max-width: 768px) {
+  .page-wrap { padding: 68px 12px 40px; }
+  .stats-row { gap: 10px; }
+  .stat-box { min-width: 80px; padding: 12px 14px; }
+  .badges-grid { gap: 8px; }
+  .badge-card { min-width: 90px; padding: 12px 14px; }
+}
       `}</style>
 
       {/* Navbar */}

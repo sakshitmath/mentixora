@@ -2,12 +2,14 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { createPost, getCommunities } from '../lib/api';
+import Toast from '../components/Toast';
 
 export default function CreatePostPage() {
   const router = useRouter();
   const [communities, setCommunities] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [toast, setToast] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -42,10 +44,11 @@ export default function CreatePostPage() {
     setError('');
     try {
       const res = await createPost({
-        ...formData,
-        communityId: parseInt(formData.communityId)
-      });
-      router.push(`/posts/${res.data.id}`);
+  ...formData,
+  communityId: parseInt(formData.communityId)
+});
+setToast({ message: '🚀 Post published successfully!', type: 'success' });
+setTimeout(() => router.push(`/posts/${res.data.id}`), 1000);
     } catch (err) {
       setError(err.response?.data || 'Failed to create post');
     } finally {
@@ -233,6 +236,12 @@ export default function CreatePostPage() {
           background: rgba(0,180,255,0.08);
           margin: 20px 0;
         }
+          @media (max-width: 768px) {
+  .page-wrap { padding: 68px 12px 40px; }
+  .card { padding: 20px 16px; }
+  .mood-grid { gap: 6px; }
+  .flair-grid { gap: 6px; }
+}
       `}</style>
 
       {/* Navbar */}
@@ -354,6 +363,13 @@ export default function CreatePostPage() {
           </form>
         </div>
       </div>
+      {toast && (
+  <Toast
+    message={toast.message}
+    type={toast.type}
+    onClose={() => setToast(null)}
+  />
+)}
     </>
   );
 }

@@ -218,6 +218,13 @@ export default function LeaderboardPage() {
           padding: 60px; font-size: 14px;
           letter-spacing: 0.1em;
         }
+          @media (max-width: 768px) {
+  .page-wrap { padding: 68px 12px 40px; }
+  .top3-grid { gap: 8px; }
+  .top3-card { padding: 14px 10px; }
+  .top3-card.first { padding: 18px 10px; }
+  .top3-username { font-size: 11px; }
+}
       `}</style>
 
       {/* Navbar */}
