@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // This connects our frontend to our Spring Boot backend
 const API = axios.create({
-    baseURL: 'http://localhost:8081',
+    baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8081',
 });
 
 // Automatically adds JWT token to every request
