@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mentixora 🚀
+### Your Space to Connect Beyond Limits
 
-## Getting Started
+A modern full-stack social community platform inspired by Reddit, LinkedIn, and Instagram — built as an internship project.
 
-First, run the development server:
+![Mentixora](https://mentixora.vercel.app)
 
+## 🌐 Live Demo
+- **Frontend:** https://mentixora.vercel.app
+- **Backend API:** https://mentixora-backend.onrender.com
+
+## ✨ Features
+
+### Core Features
+- 🔐 JWT Authentication (Signup/Login)
+- 👥 Communities (Create, Browse, View)
+- 📝 Posts (Create, List, Sort by Latest/Trending)
+- 💬 Comments (Add, View)
+- ⬆️ Voting System (Upvote/Downvote with toggle)
+- 🔍 Search posts by keyword
+- 📱 Fully responsive (Mobile + Desktop)
+
+### Unique Features
+- 😊 **Mood Tagging** — Tag posts with moods (Happy, Rant, Question, Inspiring, Debate)
+- 🏆 **Credix System** — Reputation points, contributor levels, leaderboard, badges
+- 💡 **Reaction System** — 6 reactions (Helpful, Relatable, Interesting, Inspirational, Funny, Appreciated)
+- ⚡ **Karma System** — Auto-updates on posts, comments, votes, reactions
+- 🔥 **Trending Feed** — Posts sorted by upvotes in last 24 hours
+- 🎨 **Post Flairs** — Colorful labels for posts
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | Spring Boot 3.3.4 (Java 21) |
+| Security | Spring Security + JWT |
+| Database ORM | Spring Data JPA + Hibernate |
+| Database | PostgreSQL (Supabase) |
+| Frontend | Next.js 16 + Tailwind CSS |
+| HTTP Client | Axios |
+| Backend Deploy | Render.com |
+| Frontend Deploy | Vercel |
+
+## 🏗️ Architecture
+## 🔌 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/auth/signup | Register user |
+| POST | /api/auth/login | Login user |
+| GET | /api/communities | Get all communities |
+| POST | /api/communities | Create community |
+| GET | /api/posts | Get all posts |
+| GET | /api/posts/trending | Get trending posts |
+| POST | /api/posts | Create post |
+| POST | /api/comments | Add comment |
+| POST | /api/votes | Vote on post |
+| POST | /api/reactions | React to post |
+| GET | /api/credix/leaderboard | Get leaderboard |
+
+## 🚀 Local Setup
+
+### Prerequisites
+- Java 21
+- Maven
+- PostgreSQL
+- Node.js 18+
+
+### Backend Setup
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd backend/backend
+# Update application.properties with your DB credentials
+./mvnw spring-boot:run
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 👤 Test Credentials
+- Email: `rahul@mentixora.com`
+- Password: `password123`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎓 Developer
+**Sakshi Torgalmath**
+Internship Project — 2026
